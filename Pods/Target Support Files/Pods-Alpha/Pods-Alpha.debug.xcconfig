@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/AviarySDK/AviarySDK-4.3.3/AviarySDK"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AviarySDK" "${PODS_ROOT}/Headers/Public/CocoaLumberjack" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/ReactiveCocoa/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/WSMLogger" "${PODS_ROOT}/Headers/Public/WSMUtilities"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AviarySDK" -isystem "${PODS_ROOT}/Headers/Public/CocoaLumberjack" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/WSMLogger" -isystem "${PODS_ROOT}/Headers/Public/WSMUtilities"
+OTHER_LDFLAGS = -ObjC -l"Pods-Alpha-AviarySDK" -l"Pods-Alpha-CocoaLumberjack" -l"Pods-Alpha-ReactiveCocoa" -l"Pods-Alpha-WSMLogger" -l"Pods-Alpha-WSMUtilities" -l"sqlite3" -l"z" -framework "Accelerate" -framework "AviarySDK" -framework "CoreData" -framework "MessageUI" -framework "OpenGLES" -framework "QuartzCore" -framework "StoreKit" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

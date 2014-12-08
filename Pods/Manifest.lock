@@ -1,0 +1,35 @@
+PODS:
+  - AviarySDK (4.3.3)
+  - CocoaLumberjack (2.0.0-beta3):
+    - CocoaLumberjack/Default (= 2.0.0-beta3)
+    - CocoaLumberjack/Extensions (= 2.0.0-beta3)
+  - CocoaLumberjack/Core (2.0.0-beta3)
+  - CocoaLumberjack/Default (2.0.0-beta3):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0-beta3):
+    - CocoaLumberjack/Default
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - WSMLogger (0.1.1):
+    - CocoaLumberjack (= 2.0.0-beta3)
+  - WSMUtilities (0.0.4)
+
+DEPENDENCIES:
+  - AviarySDK
+  - ReactiveCocoa
+  - WSMLogger
+  - WSMUtilities
+
+SPEC CHECKSUMS:
+  AviarySDK: f80379049c903acd793761cb4f386caf2d93bfe7
+  CocoaLumberjack: 55c22a2b8bde7a29c568ab4015b5874216524d70
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+  WSMLogger: ee73623f39f3355340bbd1edea91e0fcbef26420
+  WSMUtilities: b7099f137c24a3bf3f4ec49d5b08998845804c3c
+
+COCOAPODS: 0.35.0

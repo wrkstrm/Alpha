@@ -1,0 +1,31 @@
+//
+//  Alpha-Prefix.pch
+//  Alpha
+//
+//  Created by Cristian Monterroza on 12/7/14.
+//  Copyright (c) 2014 wrkstrm. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+//First party
+#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//Third party
+#import <CouchbaseLite/CouchbaseLite.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+#import <AviarySDK/AviarySDK.h>
+
+//My Party
+#import <WSMLogger/WSMLogger.h>
+#import <WSMUtilities/WSMUtilities.h>
+
+#endif
