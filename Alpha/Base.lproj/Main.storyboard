@@ -45,11 +45,51 @@
                     </tabBar>
                     <connections>
                         <segue destination="lcB-lv-39K" kind="relationship" relationship="viewControllers" id="XYW-2c-NnQ"/>
+                        <segue destination="cRr-nq-EHo" kind="relationship" relationship="viewControllers" id="q7o-aS-qB7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdT-cO-Trt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="328"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="63m-ux-oeQ">
+            <objects>
+                <viewController id="cRr-nq-EHo" customClass="PickerViewContrller" customModule="Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aWR-sg-B8N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dxd-C4-nhv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cR9-aB-wuW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJT-If-C9T">
+                                <rect key="frame" x="6" y="0.0" width="594" height="487"/>
+                                <state key="normal" title="Pick-ture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pick:" destination="cRr-nq-EHo" eventType="touchUpInside" id="7YR-1C-bPc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dJT-If-C9T" firstAttribute="leading" secondItem="cR9-aB-wuW" secondAttribute="leading" id="4Sd-Zg-Edq"/>
+                            <constraint firstAttribute="trailing" secondItem="dJT-If-C9T" secondAttribute="trailing" id="4gJ-Uw-G1Q"/>
+                            <constraint firstItem="Dxd-C4-nhv" firstAttribute="top" secondItem="dJT-If-C9T" secondAttribute="bottom" id="V6Z-EF-Vhf"/>
+                            <constraint firstItem="dJT-If-C9T" firstAttribute="top" secondItem="aWR-sg-B8N" secondAttribute="bottom" id="v9t-It-pKi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Picker" id="pd5-hg-amo"/>
+                    <connections>
+                        <outlet property="pickButton" destination="dJT-If-C9T" id="26q-Mv-BjL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nc1-na-xaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="896"/>
         </scene>
         <!--Alpha-->
         <scene sceneID="31T-cO-glA">
@@ -85,11 +125,11 @@
                             <outlet property="delegate" destination="lcB-lv-39K" id="JhY-UX-fds"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="lxH-Jq-sXQ"/>
+                    <tabBarItem key="tabBarItem" title="Process" id="lxH-Jq-sXQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ff0-YC-Yuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="328"/>
+            <point key="canvasLocation" x="1790" y="224"/>
         </scene>
     </scenes>
 </document>
