@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootViewController: UITableViewController, PHPhotoLibraryChangeObserver {
+class RootViewController : UITableViewController, PHPhotoLibraryChangeObserver {
     //MARK:- Properties
     var collectionsFetchResults = [PHFetchResult]()
     var collectionsLocalizedTitles = [String]()
@@ -82,7 +82,8 @@ class RootViewController: UITableViewController, PHPhotoLibraryChangeObserver {
             return cell
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, willDisplayCell
+        cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.blackColor()
         cell.textLabel?.textColor = AppDelegate.sobrrGold()
         cell.accessoryView?.tintColor = AppDelegate.sobrrGold()
