@@ -17,11 +17,12 @@
 		6E2BABBA1A3561CA0099EC47 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2BABB91A3561CA0099EC47 /* libz.dylib */; };
 		6E2BABC61A35802E0099EC47 /* p.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BABC51A35802E0099EC47 /* p.swift */; };
 		6E4FA95A1A3559DC00C37414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA9591A3559DC00C37414 /* AppDelegate.swift */; };
-		6E4FA95C1A3559DC00C37414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA95B1A3559DC00C37414 /* ViewController.swift */; };
+		6E4FA95C1A3559DC00C37414 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA95B1A3559DC00C37414 /* RootViewController.swift */; };
 		6E4FA95F1A3559DC00C37414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4FA95D1A3559DC00C37414 /* Main.storyboard */; };
 		6E4FA9611A3559DC00C37414 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4FA9601A3559DC00C37414 /* Images.xcassets */; };
 		6E4FA9641A3559DC00C37414 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4FA9621A3559DC00C37414 /* LaunchScreen.xib */; };
 		6E4FA9701A3559DC00C37414 /* AlphaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FA96F1A3559DC00C37414 /* AlphaTests.swift */; };
+		6EF42F4F1A366FE800C8E436 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF42F4E1A366FE800C8E436 /* Photos.framework */; };
 		DFE3BCCC89DD1442526670D3 /* libPods-Alpha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4519B8B21B352945ECE814 /* libPods-Alpha.a */; };
 		E7832FD9FA3EEDCCDF775A69 /* libPods-AlphaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D193347BA2975A2D9D13F /* libPods-AlphaTests.a */; };
 /* End PBXBuildFile section */
@@ -51,7 +52,7 @@
 		6E4FA9541A3559DC00C37414 /* Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4FA9581A3559DC00C37414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4FA9591A3559DC00C37414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E4FA95B1A3559DC00C37414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E4FA95B1A3559DC00C37414 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		6E4FA95E1A3559DC00C37414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E4FA9601A3559DC00C37414 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6E4FA9631A3559DC00C37414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -59,6 +60,8 @@
 		6E4FA96E1A3559DC00C37414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4FA96F1A3559DC00C37414 /* AlphaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTests.swift; sourceTree = "<group>"; };
 		6E4FA9791A355E2500C37414 /* Alpha-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alpha-Bridging-Header.h"; sourceTree = "<group>"; };
+		6EF42F4E1A366FE800C8E436 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		6EF42F501A36700F00C8E436 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		7BE0BF3EDF17E4494E11C8BF /* Pods-Alpha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alpha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alpha/Pods-Alpha.release.xcconfig"; sourceTree = "<group>"; };
 		8A4519B8B21B352945ECE814 /* libPods-Alpha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alpha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5D193347BA2975A2D9D13F /* libPods-AlphaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlphaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF42F4F1A366FE800C8E436 /* Photos.framework in Frameworks */,
 				6E2BABBA1A3561CA0099EC47 /* libz.dylib in Frameworks */,
 				6E2BABB81A3561BA0099EC47 /* SystemConfiguration.framework in Frameworks */,
 				6E2BABB61A3561B30099EC47 /* Security.framework in Frameworks */,
@@ -118,7 +122,7 @@
 		6E2BABC21A35663C0099EC47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E4FA95B1A3559DC00C37414 /* ViewController.swift */,
+				6E4FA95B1A3559DC00C37414 /* RootViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +189,8 @@
 		A30028C6D74CCC04BF94D920 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EF42F501A36700F00C8E436 /* PhotosUI.framework */,
+				6EF42F4E1A366FE800C8E436 /* Photos.framework */,
 				6E2BABB91A3561CA0099EC47 /* libz.dylib */,
 				6E2BABB71A3561BA0099EC47 /* SystemConfiguration.framework */,
 				6E2BABB51A3561B30099EC47 /* Security.framework */,
@@ -366,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4FA95C1A3559DC00C37414 /* ViewController.swift in Sources */,
+				6E4FA95C1A3559DC00C37414 /* RootViewController.swift in Sources */,
 				6E2BABC61A35802E0099EC47 /* p.swift in Sources */,
 				6E4FA95A1A3559DC00C37414 /* AppDelegate.swift in Sources */,
 			);

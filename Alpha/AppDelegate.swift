@@ -20,8 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DDLog.addLogger(logger)
     }
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions
+        launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window?.tintColor = AppDelegate.sobrrGold()
         return true
+    }
+    
+    class func sobrrGold() -> UIColor {
+        return SKColorMakeRGB(250, 213, 142)
     }
     
     func applicationWillResignActive(application: UIApplication) {
