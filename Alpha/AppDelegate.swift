@@ -22,8 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window?.tintColor = AppDelegate.sobrrGold()
-        return true
+            UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent,
+                animated:false)
+            window?.tintColor = AppDelegate.sobrrGold()
+            return true
     }
     
     class func sobrrGold() -> UIColor {
