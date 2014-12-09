@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootViewController : UITableViewController, PHPhotoLibraryChangeObserver {
+class ProcessViewController : UITableViewController, PHPhotoLibraryChangeObserver {
     //MARK:- Properties
     var collectionsFetchResults = [PHFetchResult]()
     var collectionsLocalizedTitles = [String]()
@@ -118,4 +118,3 @@ class RootViewController : UITableViewController, PHPhotoLibraryChangeObserver {
         super.didReceiveMemoryWarning()
     }
 }
-

@@ -9,7 +9,7 @@
 import UIKit
 
 class PickerViewContrller : UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate , AFPhotoEditorControllerDelegate {
     var image:UIImage?
     @IBOutlet var pickButton: UIButton!
     
@@ -34,10 +34,25 @@ UINavigationControllerDelegate {
     
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-            image = UIImage.resizeImage(info[UIImagePickerControllerOriginalImage] as UIImage,
-                newSize: CGSizeMake(200, 200))
-            image = image?.imageRotatedByDegrees(90.0)
-            pickButton.setImage(image, forState: UIControlState.Normal)
-            self.dismissViewControllerAnimated(true, completion: nil)
+            weak var that = self
+            self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                var editorController = AFPhotoEditorController(image:
+                    info[UIImagePickerControllerOriginalImage] as UIImage)
+                editorController.delegate = self
+                that?.presentViewController(editorController, animated: true, completion: nil)
+            })
+    }
+    
+    func photoEditor(editor: AFPhotoEditorController!, finishedWithImage image: UIImage!) {
+        pickButton.setImage(image, forState: UIControlState.Normal)
+        var scaledImage = image.imageByScalingProportionallyToSize(pickButton.frame.size)
+        pickButton.setBackgroundImage(scaledImage, forState: UIControlState.Normal)
+        pickButton.tintColor = UIColor.clearColor()
+        let center = pickButton.center
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func photoEditorCanceled(editor: AFPhotoEditorController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
