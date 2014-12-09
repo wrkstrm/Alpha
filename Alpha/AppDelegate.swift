@@ -10,7 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let aKey = "aviaryAPIKey"
+    let aSecret = "aviarySecret"
+    
     var window: UIWindow?
+    var secrets:NSDictionary? {
+        get {
+            let filePath = NSBundle.mainBundle().pathForResource("secrets", ofType: "json")
+            return NSJSONSerialization.JSONObjectWithData(NSData(contentsOfFile: filePath!)!,
+                options:NSJSONReadingOptions.MutableLeaves, error: nil) as NSDictionary?
+        }
+    }
     
     override class func load() {
         var logger = WSMLogger.sharedInstance()
@@ -25,12 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent,
                 animated:false)
             window?.tintColor = AppDelegate.sobrrGold()
+            AFPhotoEditorController.setAPIKey(secrets![aKey] as String,
+                secret: secrets![aSecret] as String)
+            AFOpenGLManager.beginOpenGLLoad()
+            AFPhotoEditorController.setPremiumAddOns(AFPhotoEditorPremiumAddOn.HiRes)
             return true
     }
     
     class func sobrrGold() -> UIColor {
         return SKColorMakeRGB(250, 213, 142)
     }
+    
+    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
