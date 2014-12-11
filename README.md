@@ -11,7 +11,7 @@ This app is an experiment of what is possible.
 - Clone.
 
 ```sh
-git clone https://github.com/wrkstrm/HelveticaNeue.git
+git clone https://github.com/wrkstrm/Alpha.git
 ```
 
 - Initiate submodules.
