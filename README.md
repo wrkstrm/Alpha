@@ -8,7 +8,7 @@ This app is an experiment of what is possible.
 
 #Use Cases
 
-- Download pic from Sony Camera, Filter and Post to Social Networks. 
+- Download pic from Sony Camera, post process and and then post to Social Networks. 
 
 #Building
 
