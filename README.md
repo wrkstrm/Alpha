@@ -6,6 +6,10 @@ However, with the debut of iOS 8, the possiblities for experienced photographers
 
 This app is an experiment of what is possible. 
 
+#Use Cases
+
+- Download pic from Sony Camera, Filter and Post to Social Networks. 
+
 #Building
 
 - Clone.
