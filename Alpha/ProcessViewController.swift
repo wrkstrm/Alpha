@@ -47,7 +47,7 @@ class ProcessViewController : UITableViewController, PHPhotoLibraryChangeObserve
     
     override func tableView(tableView: UITableView, heightForHeaderInSection
         section: Int) -> CGFloat {
-        return section == 0 ? 0.0 : 44.00
+            return section == 0 ? 0.0 : 44.00
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -84,9 +84,29 @@ class ProcessViewController : UITableViewController, PHPhotoLibraryChangeObserve
     
     override func tableView(tableView: UITableView, willDisplayCell
         cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.blackColor()
-        cell.textLabel?.textColor = AppDelegate.sobrrGold()
-        cell.accessoryView?.tintColor = AppDelegate.sobrrGold()
+            cell.backgroundColor = UIColor.blackColor()
+            cell.textLabel?.textColor = AppDelegate.sobrrGold()
+            cell.accessoryView?.tintColor = AppDelegate.sobrrGold()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as PhotoGridViewController
+        switch segue.identifier as String! {
+        case "showAllPhotos":
+            var options = PHFetchOptions()
+            options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+            controller.assetsFetchResults = PHAsset.fetchAssetsWithOptions(options)
+        default:
+            var path = self.tableView.indexPathForCell(sender as UITableViewCell)
+            var fetchResult = self.collectionsFetchResults[path!.section - 1]
+            if  fetchResult[path!.row] is PHAssetCollection {
+                let assetCollection = fetchResult[path!.row] as PHAssetCollection
+                var assetsFetchReult = PHAsset.fetchAssetsInAssetCollection(assetCollection,
+                    options: nil)
+                controller.assetsFetchResults = assetsFetchReult
+                controller.assetCollection = assetCollection
+            }
+        }
     }
     
     //MARK:- PhotoChangeObserver
