@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 wrkstrm. All rights reserved.
 //
 
-func p(message: @autoclosure () -> String,
+func p(@autoclosure message: () -> String,
     function: String = __FUNCTION__, file: String = __FILE__,  line: UInt = __LINE__) {
         var url = NSURL(string: file)
         var now = NSDate.now(.MinuteCalendarUnit | .SecondCalendarUnit | NSCalendarUnit.CalendarUnitNanosecond)

@@ -67,14 +67,14 @@ class ProcessViewController : UITableViewController, PHPhotoLibraryChangeObserve
             switch indexPath.section {
             case 0:
                 cell = tableView.dequeueReusableCellWithIdentifier(AllPhotosReuseIdentifier,
-                    forIndexPath: indexPath) as UITableViewCell
+                    forIndexPath: indexPath) as! UITableViewCell
                 localizedTitle = "All Photos"
             default:
                 cell = tableView.dequeueReusableCellWithIdentifier(CollectionCellReuseIdentifier,
-                    forIndexPath: indexPath) as UITableViewCell
+                    forIndexPath: indexPath) as! UITableViewCell
                 var fetchResult = self.collectionsFetchResults[indexPath.section - 1]
                     as PHFetchResult
-                var collection = fetchResult[indexPath.row] as PHCollection
+                var collection = fetchResult[indexPath.row] as! PHCollection
                 localizedTitle = collection.localizedTitle;
             }
             
@@ -90,21 +90,21 @@ class ProcessViewController : UITableViewController, PHPhotoLibraryChangeObserve
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let controller = segue.destinationViewController as PhotoGridViewController
+        let controller = segue.destinationViewController as? PhotoGridViewController
         switch segue.identifier as String! {
         case "showAllPhotos":
             var options = PHFetchOptions()
             options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-            controller.assetsFetchResults = PHAsset.fetchAssetsWithOptions(options)
+            controller?.assetsFetchResults = PHAsset.fetchAssetsWithOptions(options)
         default:
-            var path = self.tableView.indexPathForCell(sender as UITableViewCell)
+            var path = self.tableView.indexPathForCell(sender as! UITableViewCell!)
             var fetchResult = self.collectionsFetchResults[path!.section - 1]
             if  fetchResult[path!.row] is PHAssetCollection {
-                let assetCollection = fetchResult[path!.row] as PHAssetCollection
+                let assetCollection = fetchResult[path!.row] as? PHAssetCollection
                 var assetsFetchReult = PHAsset.fetchAssetsInAssetCollection(assetCollection,
                     options: nil)
-                controller.assetsFetchResults = assetsFetchReult
-                controller.assetCollection = assetCollection
+                controller?.assetsFetchResults = assetsFetchReult
+                controller?.assetCollection = assetCollection
             }
         }
     }

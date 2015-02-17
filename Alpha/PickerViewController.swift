@@ -37,7 +37,7 @@ UINavigationControllerDelegate , AFPhotoEditorControllerDelegate {
             weak var that = self
             self.dismissViewControllerAnimated(true, completion: { () -> Void in
                 var editorController = AFPhotoEditorController(image:
-                    info[UIImagePickerControllerOriginalImage] as UIImage)
+                    info[UIImagePickerControllerOriginalImage] as! UIImage)
                 editorController.delegate = self
                 that?.presentViewController(editorController, animated: true, completion: nil)
             })
